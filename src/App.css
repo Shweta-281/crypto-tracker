@@ -1,0 +1,123 @@
+.App {
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+.table-container {
+  overflow-x: auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: right;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.coin-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.coin-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.star-cell {
+  text-align: center;
+  width: 40px;
+}
+
+.star-cell svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.star-cell:hover svg {
+  transform: scale(1.2);
+}
+
+.recharts-surface {
+  overflow: visible;
+}
+
+.recharts-curve {
+  transition: all 0.3s ease;
+}
+
+.recharts-cartesian-axis line,
+.recharts-cartesian-axis-tick-line {
+  display: none;
+}
+
+.recharts-cartesian-axis-tick text {
+  display: none;
+}
+
+.recharts-cartesian-grid-horizontal line {
+  stroke: #eee;
+}
+
+.recharts-wrapper {
+  position: absolute !important;
+}
+
+.recharts-tooltip-wrapper {
+  display: none;
+}
+
+.chart {
+  width: 120px;
+  height: 40px;
+}
+.chart-container {
+  width: 120px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .App {
+    padding: 1rem;
+  }
+  
+  th, td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  th, td {
+    font-size: 0.8rem;
+  }
+  
+  .chart {
+    width: 80px;
+  }
+}
