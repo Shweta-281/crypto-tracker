@@ -97,13 +97,13 @@ export const cryptoSlice = createSlice({
   reducers: {
     updatePrices: (state) => {
       return state.map(coin => {
-        const fluctuation = (Math.random() * 0.02 - 0.01);
-        const newPrice = coin.price * (1 + (Math.random() * 0.02 - 0.01));
+        const fluctuation = (Math.random() * 0.05 - 0.025);
+        const newPrice = coin.price * (1 + fluctuation);
         const newChange7d = ((newPrice - coin.history[0]) / coin.history[0]) * 100;
       return {
         ...coin,
-        price: newPrice,
-        history: [...coin.history.slice(1), newPrice],
+        price: Number(newPrice.toFixed(2)),
+        history: [...coin.history.slice(1), Number(newPrice.toFixed(2))],
         change7d: +newChange7d.toFixed(2),
         change1h: +(coin.change1h + (Math.random() * 0.4 - 0.2)).toFixed(2),
         change24h: +(coin.change24h + (Math.random() * 0.4 - 0.2)).toFixed(2),

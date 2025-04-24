@@ -80,7 +80,12 @@ th {
 }
 
 .recharts-cartesian-grid-horizontal line {
-  stroke: #eee;
+  display: none;
+}
+
+.recharts-line {
+  shape-rendering: crispEdges;
+  filter: none;
 }
 
 .recharts-wrapper {
@@ -98,7 +103,7 @@ th {
 .chart-container {
   width: 120px;
   height: 40px;
-  margin: 0 auto;
+  overflow: visible;
 }
 
 /* Responsive Design */

@@ -83,8 +83,8 @@ const CryptoTable = () => {
               <td>
   <div style={{ width: 120, height: 60 }}>
     <SparklineChart data={coin.history.map((price, index) => ({
-      price,
-      name: `Day ${index + 1}`
+      price: Number(price),
+      name: index
     }))} 
     positive={coin.change7d >= 0}/>
   </div>
